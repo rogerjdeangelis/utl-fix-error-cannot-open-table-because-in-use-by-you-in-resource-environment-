@@ -46,6 +46,8 @@ Fix error: cannot open table because in use by you in resource environment
     varNames = "x1":"x4";
     create Normal from X[c=varNames]; append from X;
     create Normal from X[c=varNames]; append from X;
+    
+    %let rc=%sysfunc(open(work.normal));
 
     data normal;
      set sashelp.class;
